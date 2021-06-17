@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <a href="/BergFinance/src/app/perfil/perfil.page.html"><ion-icon class="a-icon" name="arrow-back-outline"></ion-icon></a>
+  <ion-title>Login</ion-title>
+  </ion-toolbar>
+  </ion-header>
+  <ion-content>
+  <ion-item>
+  <ion-label position="floating">E-mail</ion-label>
+  <ion-input type="email" [(ngModel)]="usuario.email" required>
+  </ion-input>
+  </ion-item>
+  <ion-item>
+  <ion-label position="floating">senha</ion-label>
+  <ion-input type="password"[(ngModel)]="usuario.senha" required></ion-input>
+  </ion-item>
+  <ion-button class="btn" color="primary" expand="full" (click)="login(usuario)">Login</ion-button>
+  <ion-button class="btn" color="light" expand="full" [routerLink]="['/registrar']">Cadastre-se</ion-button>
+  </ion-content>

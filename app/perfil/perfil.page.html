@@ -1,0 +1,97 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> Editar Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+   
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+              <ion-input type="text" [(ngModel)]="perfil.nome" placeholder="Nome"></ion-input>
+          </ion-col>
+          <ion-col>
+              <ion-input type="text" [(ngModel)]="perfil.sobrenome" placeholder="Sobrenome"> </ion-input>   
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col size="8">
+                <ion-input type="text" [(ngModel)]="perfil.cpf" placeholder="CPF"></ion-input>            
+            </ion-col>
+          </ion-row>
+        
+          <ion-row>
+              <ion-col>
+                  <ion-input type="text" [(ngModel)]="perfil.rua" placeholder="Rua"></ion-input>        
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col size="4">
+                    <ion-input type="number" [(ngModel)]="perfil.numero" placeholder="Numero"></ion-input>
+                </ion-col>
+              </ion-row>
+
+            <ion-row>
+                <ion-col>
+                  <ion-input type="text" [(ngModel)]="perfil.complemento" placeholder="Complemento"></ion-input>    
+                </ion-col>
+              </ion-row>
+
+              <ion-row>
+                  <ion-col size="4">
+                    <ion-input type="text" [(ngModel)]="perfil.cidade" placeholder="Cidade"></ion-input>    
+                  </ion-col>
+                  <ion-col size="4">
+                      <ion-input type="text" [(ngModel)]="perfil.cep" placeholder="CEP"></ion-input>    
+                    </ion-col>
+                    <ion-col size="4">
+                        <ion-input type="text" [(ngModel)]="perfil.estado" placeholder="Estado"></ion-input>    
+                    </ion-col>                  
+                    
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <ion-button (click)="salvarPerfil()" expand="full">
+                            Salvar Perfil
+                          </ion-button>  
+                    </ion-col>
+                  </ion-row>
+      </ion-grid>
+        
+    
+</ion-content>
+
+
+<ion-footer>
+<ion-toolbar>
+    <ion-tabs>
+        <ion-tab-bar slot="bottom">
+          <ion-tab-button [routerLink]="['/home']">
+            <ion-icon name="home"></ion-icon>
+            <ion-label>Home</ion-label>
+            <ion-badge>6</ion-badge>
+          </ion-tab-button>
+      
+          <ion-tab-button  [routerLink]="['/gastos']">
+            <ion-icon name="cash-outline"></ion-icon>
+            <ion-label>Movimentações</ion-label>
+          </ion-tab-button>
+      
+          <ion-tab-button [routerLink]="['/upload']">
+            <ion-icon name="images-outline"></ion-icon>
+            <ion-label>Upload NFs</ion-label>
+          </ion-tab-button>
+      
+          <ion-tab-button [routerLink]="['/perfil']">
+            <ion-icon name="person-outline"></ion-icon>
+            <ion-label>Perfil</ion-label>
+          </ion-tab-button>
+        </ion-tab-bar>
+      </ion-tabs>
+</ion-toolbar>
+
+</ion-footer>  
+
